@@ -22,7 +22,7 @@ linux-engicam_4.14.98 (https://github.com/engicam-stable/linux-engicam_4.14.98)
 The idea is to provide a new device tree written to include the customer device tree , 
 and replace from it the old pmic settings with the new one. 
 
-We provide an example for the starterkit devicetree at thhis link: 
+We provide an example for the starterkit devicetree at this link: 
 
 https://github.com/engicam-stable/linux-engicam-nxp/blob/5.4.70/arch/arm64/boot/dts/engicam/imx8mm-icore-pca9450.dts
 
@@ -33,7 +33,7 @@ After kernel build we will obtain 2 different devicetree for starterkit:
 
 ```
 * imx8mm-icore.dtb (old pmic PF8100)
-* imx8mm-icore-pca9450.dtb (old pmic PCA9450)
+* imx8mm-icore-pca9450.dtb (new pmic PCA9450)
 ```
 
 So you need to change the default device tree load from system with the right one.
@@ -44,7 +44,7 @@ and set , if needed , the new devicetree as default devicetree.
 The script must be run during the production phase, not in the field. 
 Read carefully the *known issue* chapter.
 
-In this example the naming convetion user for dtbs is:
+In this example the naming convention user for dtbs is:
 
 ```
 <original-dtb-name>.dtb the old one
